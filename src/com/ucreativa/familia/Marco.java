@@ -4,7 +4,8 @@ public class Marco {
 
     public Marco() {
 
-        System.out.println("Hola Clase");
+        System.out.println("Hi Class");
 
     }
 }
+

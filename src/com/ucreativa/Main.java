@@ -8,6 +8,6 @@ public class Main {
 
         Marco yo = new Marco();
 
-        System.out.println("Bye Clase");
+        System.out.println("Bye Class");
     }
 }
