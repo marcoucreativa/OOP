@@ -3,9 +3,6 @@ package com.ucreativa.familia;
 public class Marco {
 
     public Marco() {
-
-        System.out.println("Hi Class");
-
+        System.out.println("Hola Clase");
     }
 }
-
