@@ -2,7 +2,10 @@ package com.ucreativa.familia;
 
 public class Marco {
 
-    public Marco() {
-        System.out.println("Hola Clase");
-    }
+     public int edad = 12;
+
+     public Marco(String saludar, int edad){
+
+     }
+
 }

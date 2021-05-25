@@ -2,8 +2,7 @@ package com.ucreativa.familia;
 
 public class Mary {
 
-    public Mary(String greetings){
-        System.out.println(greetings);
+    public Mary(String saludo) {
+        System.out.println(saludo);
     }
-
 }
