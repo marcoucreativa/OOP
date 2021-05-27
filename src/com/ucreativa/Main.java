@@ -8,13 +8,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Marco yo = new Marco("Hola", 12);
-        yo.edad = 13;
+        Marco yo = new Marco();
+        Mary mama = new Mary("Hola Chiquillos",
+                70,
+                "Jardineria");
 
-        Mary mama = new Mary("Hola Chiquillos");
-
-        System.out.println("Bye Class " + yo.edad);
+        System.out.println("Bye Class ");
     }
-};
+}
 
 
