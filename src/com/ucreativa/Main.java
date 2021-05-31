@@ -3,7 +3,6 @@ package com.ucreativa;
 import com.ucreativa.familia.Marco;
 import com.ucreativa.familia.Mary;
 
-
 public class Main {
 
     public static void main(String[] args) {
