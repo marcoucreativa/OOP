@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Marco yo = new Marco();
+        Marco yo = new Marco("Hello", 39, "Drink Coffee with my wife");
         Mary mama = new Mary("Hola Chiquillos",
                 70,
                 "Jardineria");

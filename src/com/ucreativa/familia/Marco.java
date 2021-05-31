@@ -1,10 +1,9 @@
 package com.ucreativa.familia;
 
-public class Marco {
+public class Marco extends Mary {
 
-     public Marco(){
-          System.out.println("Hola Clase, " +
-                  "ya llegué");
+     public Marco(String saludo, int age, String hobby) {
+          super(saludo, age, hobby);
      }
 }
 
