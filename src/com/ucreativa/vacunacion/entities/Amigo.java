@@ -1,4 +1,4 @@
-package com.ucreativa.vacunacion;
+package com.ucreativa.vacunacion.entities;
 
 public class Amigo extends Persona{
 
@@ -11,6 +11,9 @@ public class Amigo extends Persona{
         this.facebook = facebook;
     }
 
+    public static Amigo create(String nombre, String cedula, int edad, boolean riesgo, String relacion, String facebook){
+        return new Amigo(nombre, cedula, edad, riesgo, relacion, facebook);
+    }
     // <editor-fold desc="Metodos">
     public String getRelacion() {
         return relacion;

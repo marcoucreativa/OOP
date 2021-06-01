@@ -1,4 +1,4 @@
-package com.ucreativa;
+package com.ucreativa.familia;
 
 import com.ucreativa.familia.Marco;
 import com.ucreativa.familia.Mary;
