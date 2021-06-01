@@ -1,4 +1,4 @@
-package com.ucreativa.vacunacion;
+package com.ucreativa.vacunacion.entities;
 
 public class Persona {
     private String nombre;
@@ -19,7 +19,7 @@ public class Persona {
     }
 
     public void addYear() {
-        this.edad = this.edad + 1;
+        this.edad = this.edad++;
     }
 
     public boolean isRiesgo() {
