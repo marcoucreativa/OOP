@@ -27,5 +27,10 @@ public class Amigo extends Persona{
     public void setFacebook(String facebook) {
         this.facebook = facebook;
     }
+
+    @Override
+    public String toString() {
+        return super.getNombre();
+    }
     // </editor-fold>
 }
