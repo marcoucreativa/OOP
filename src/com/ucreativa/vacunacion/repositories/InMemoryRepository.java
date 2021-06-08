@@ -3,6 +3,7 @@ package com.ucreativa.vacunacion.repositories;
 import com.ucreativa.vacunacion.entities.BitacoraVacunas;
 import com.ucreativa.vacunacion.entities.Persona;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -20,7 +21,12 @@ public class InMemoryRepository implements IRepository {
         return true;
     }
 
-    public List<BitacoraVacunas> getDB() {
-        return db;
+    public List<String> getDB() {
+        SimpleDateFormat format = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
+        List<String> lines = new ArrayList<>();
+        for (BitacoraVacunas item : db){
+            lines.add(item.getPersona().getNombre() + " - " + item.getMarca() + " - " + format.format(item.getFecha()));
+        }
+        return lines;
     }
 }

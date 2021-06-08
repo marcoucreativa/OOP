@@ -1,36 +1,24 @@
 package com.ucreativa.vacunacion.repositories;
 
-import com.ucreativa.vacunacion.entities.BitacoraVacunas;
 import com.ucreativa.vacunacion.entities.Persona;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
-public class FileRepository implements IRepository{
+public class FileRepository implements IRepository {
 
     private final String FILE_PATH = "db.txt";
 
-    public FileRepository(){
-        File myObj = new File(this.FILE_PATH);
-        try {
-            if (myObj.createNewFile()) {
-                System.out.println("File created: " + myObj.getName());
-            } else {
-                System.out.println("File already exists.");
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
     public boolean save(Persona persona, String marca, Date date) {
-        try {
-            FileWriter myWriter = new FileWriter(this.FILE_PATH);
-            myWriter.write(persona.getNombre() + " - " + marca + date.toString());
-            myWriter.close();
+        SimpleDateFormat format = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
+        String str = persona.getNombre() + " - " + marca + " - " + format.format(date) + " \n";
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_PATH, true))) {
+            writer.append(str);
+            writer.close();
             return true;
         } catch (IOException e) {
             e.printStackTrace();
@@ -38,7 +26,12 @@ public class FileRepository implements IRepository{
         }
     }
 
-    public List<BitacoraVacunas> getDB() {
+    public List<String> getDB() {
+        try (BufferedReader reader = new BufferedReader(new FileReader(FILE_PATH))) {
+            return reader.lines().collect(Collectors.toList());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return null;
     }
 }
