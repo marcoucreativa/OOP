@@ -1,2 +1,4 @@
 # OOP
-This is my new Repository
+Hola Clase, 
+
+Este es el repository que estamos viendo durante la clase.
