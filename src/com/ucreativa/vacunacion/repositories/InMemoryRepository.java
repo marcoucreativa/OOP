@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class InMemoryRepository {
+public class InMemoryRepository implements Repository {
 
-    private List<BitacoraVacunas> db;
+    private final List<BitacoraVacunas> db;
 
     public InMemoryRepository(){
         this.db = new ArrayList<>();
@@ -30,4 +30,6 @@ public class InMemoryRepository {
         }
         return lines;
     }
+
+
 }
