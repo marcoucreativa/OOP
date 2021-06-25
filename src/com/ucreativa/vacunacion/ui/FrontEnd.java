@@ -7,6 +7,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 
+import static javax.swing.JOptionPane.ERROR_MESSAGE;
+
 public class FrontEnd extends JFrame {
 
     public FrontEnd(String titulo) {
@@ -96,7 +98,7 @@ public class FrontEnd extends JFrame {
                     JOptionPane.showMessageDialog(((JButton) e.getSource()).getParent(), reporte);
                 } catch (ErrorEnEdadException error) {
                     JOptionPane.showMessageDialog(((JButton) e.getSource()).getParent(),
-                            error.getMessage());
+                            error.getMessage(), "ERROR", ERROR_MESSAGE, new ImageIcon("resources/Error.png"));
                 }
             }
         });
